@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>NeutralinoJs</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+  type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/assets/app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <br>
+      <div class="row" style="padding-left: 5px">
+        <div class="col-sm-6">
+          <div class="row">
+              <label for="sel1">Select a City:</label>
+                <div class="input-group mb-3">
+                  <select class="form-control" id="sel1">
+                    <option value="Colombo">Colombo</option>
+                    <option value="Ratnapura">Rathnapura</option>
+                    <option value="Moratuwa">Moratuwa</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Hambantota">Hambantota</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Mannar">Mannar</option>
+                  </select>
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" id="get" onclick="getData" type="button">Get Weather</button>
+                    </div>
+                </div>
+          </div>
+          <div class="row">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th> </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Temprature</td>
+                      <td id="temp"></td>
+                    </tr>
+                    <tr>
+                      <td>Pressure</td>
+                      <td id="pressure"></td>
+                    </tr>
+                    <tr>
+                      <td>Humidity</td>
+                      <td id="humidity"></td>
+                    </tr>
+                    <tr>
+                        <td>Wind</td>
+                        <td id="wind"></td>
+                    </tr>
+                    <tr>
+                        <td>Weather</td>
+                        <td id="weather"></td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <div style="width: 605px; height: 480px" id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/neutralino.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/assets/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
